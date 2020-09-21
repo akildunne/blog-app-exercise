@@ -3,7 +3,7 @@ import axios from 'axios'
 let apiUrl
 
 const apiUrls = {
-    production: '',
+    production: 'https://ahsik-ashley-brianna-blog.herokuapp.com/',
     development: 'http://localhost:3000/api'
 }
 
