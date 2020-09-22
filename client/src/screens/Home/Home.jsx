@@ -15,7 +15,7 @@ const Home = () => {
   }, [])
 
   const blogJSX = allBlogs.map((blog, index) =>
-    <BlogPosts key={index} title={blog.title} content={blog.content} author={blog.author}/>
+    <BlogPosts key={index} title={blog.title} content={blog.content} author={blog.author} id={blog._id}/>
   )
 
 
