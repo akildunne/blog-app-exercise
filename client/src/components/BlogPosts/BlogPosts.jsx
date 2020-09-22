@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './BlogPosts.css';
-import BlogPost from '../BlogPost/BlogPost';
 
-const BlogPosts = () => {
+const BlogPosts = (props) => {
   return (
     <div className='blog-posts'>
-     <BlogPost/>
+      <h3>
+        {props.title}
+      </h3>
+      <p>
+        {props.content}
+      </p>
+      <h4>
+        {props.author}
+      </h4>
     </div>
   )
 }
