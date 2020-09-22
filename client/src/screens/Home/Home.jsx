@@ -14,9 +14,14 @@ const Home = () => {
     fetchBlogs()
   }, [])
 
+  const blogJSX = allBlogs.map((blog, index) =>
+    <BlogPosts key={index} title={blog.title} content={blog.content} author={blog.author}/>
+  )
+
+
   return (
     <div className='home'>
-      <BlogPosts/>
+      {blogJSX}
     </div>
 
   )
