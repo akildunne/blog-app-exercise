@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { createBlog } from "../../services/blogs";
-import { Redirect } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
+import Layout from '../../components/shared/Layout/Layout'
 
-const CreateBlog = () => {
+const CreateBlog = (props) => {
   const [blog, setBlog] = useState({
     title: "",
     content: "",
@@ -30,6 +31,7 @@ const CreateBlog = () => {
   }
 
   return (
+    <Layout user={props.user}>
     <form className="create-blog" onSubmit={handleSubmit}>
       <input
         className="input-title"
@@ -59,7 +61,10 @@ const CreateBlog = () => {
         onChange={handleChange}
       />
       <button type='submit'>Submit</button>
-    </form>
+      </form>
+      
+    </Layout>
+    
   );
 };
 

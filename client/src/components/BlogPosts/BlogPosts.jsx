@@ -7,9 +7,10 @@ const BlogPosts = (props) => {
     <>
       <Link className="blog-posts" to={`/api/blogs/${props.id}`}>
         <h3>{props.title}</h3>
+      </Link>
         <p>{props.content}</p>
         <h4>{props.author}</h4>
-      </Link>
+     
     </>
   );
 };

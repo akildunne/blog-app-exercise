@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BlogPosts from '../../components/BlogPosts/BlogPosts';
 import './Home.css';
 import { getBlogs } from '../../services/blogs';
+import Layout from '../../components/shared/Layout/Layout'
 
 const Home = () => {
   const [allBlogs, setAllBlogs] = useState([]);
@@ -20,9 +21,11 @@ const Home = () => {
 
 
   return (
+    <Layout>
     <div className='home'>
       {blogJSX}
-    </div>
+      </div>
+    </Layout>
 
   )
 }
