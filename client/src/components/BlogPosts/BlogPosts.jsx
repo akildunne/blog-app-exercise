@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './BlogPosts.css';
-// import BlogPost from '../BlogPost/BlogPost';
+import BlogPost from '../BlogPost/BlogPost';
 
 const BlogPosts = () => {
   return (
-    <div>
-      Hello World
+    <div className='blog-posts'>
+     <BlogPost/>
     </div>
   )
 }
