@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getBlog, getBlogs } from "../../services/blogs";
+import { getBlog, deleteBlog } from "../../services/blogs";
 import { useParams } from "react-router-dom";
 
 const BlogDetail = () => {
@@ -25,6 +25,7 @@ const BlogDetail = () => {
       <h3>{blogDetail.title}</h3>
       <p>{blogDetail.content}</p>
       <h4>{blogDetail.author}</h4>
+      {/* <button className="delete-button" onClick={() => deleteBlog(blogDetail._id)}>Delete</button> */}
     </div>
   );
 };
