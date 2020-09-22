@@ -27,7 +27,7 @@ export const createBlog = async blog => {
   }
 }
 
-export const updateBlog = async (id, product) => {
+export const updateBlog = async (id, blog) => {
   try {
       const response = await api.put(`/blogs/${id}`, blog)
       return response.data
