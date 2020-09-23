@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getBlog, deleteBlog } from "../../services/blogs";
+import Layout from '../../components/shared/Layout/Layout'
+
 import { useParams, Redirect } from "react-router-dom";
+
 
 const BlogDetail = () => {
   const [redirect, setRedirect] = useState(false);
@@ -31,12 +34,16 @@ const BlogDetail = () => {
   }
 
   return (
+    <Layout>
     <div className="blog-detail">
       <h3>{blogDetail.title}</h3>
       <p>{blogDetail.content}</p>
       <h4>{blogDetail.author}</h4>
       <button className="delete-button" onClick={(e) => blogDeleted(e)}>Delete</button>
     </div>
+    </Layout>
+
+
   );
 };
 
