@@ -4,6 +4,7 @@ import './Home.css';
 import { getBlogs } from '../../services/blogs';
 import Layout from '../../components/shared/Layout/Layout'
 
+
 const Home = () => {
   const [allBlogs, setAllBlogs] = useState([]);
   
